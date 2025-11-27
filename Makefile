@@ -1,5 +1,6 @@
 # Variables
-TEX = pdflatex
+#TEX = pdflatex
+TEX = TEXINPUTS=./libtex//: pdflatex # use local .cls and .sty files
 DOC = cv
 LATEXMK = latexmk
 
