@@ -90,7 +90,7 @@ Location: Thessaloniki, Greece \newline{}
 
 \makecvtitle
 
-\vspace{-25pt}
+%\vspace{-25pt}
 \section{Education}
 \cventry[8pt]{Sep 2022 -- Nov 2025}{MSc in Computer Science \& Engineering}{Department of Computer Science, University of Crete}{Greece}{}{%
 Thesis: \href{https://github.com/kougioulis/thesis}{\textit{Large Causal Models for Temporal Causal Discovery}}\newline{}
@@ -103,15 +103,19 @@ GPA: 9.50/10.00 \newline{}
 Areas: \textbullet{} Pure Mathematics \textbullet{} Applied Mathematics \newline{}
 }
 
+\iflong
 \section{Military Service}
 \cventry[8pt]{}{Military obligations fulfilled}{}{}{}{}
+\else
+%
+\fi
 
 \section{Professional Experience}
 \iflong
-\cventry[8pt]{Oct 2023 -- today}{Research Engineer}{Foundation for Research \& Technology Hellas}{Heraklion}{Greece}{
-Conducting research under public (\href{https://elidek.gr}{\textit{HFRI}}) and private funding (\textit{Huawei Ireland Research Centre}). Core contributor in a \(\sim\)300K Huawei-funded industrial project. Developed SOTA algorithms for causal discovery, root cause analysis and counterfactual reasoning. Implemented and tested proprietary software, successfully applied in real-world scenarios. Exceeded project milestones and acceptance criteria. Collaborated with international teams, delivered biweekly reports and presentations. \newline{}
-\textbf{Research Areas:} \textbullet{} causality \textbullet{} causal discovery \textbullet{} machine learning \textbullet{} deep learning \newline{}
-\textbf{Skills:} \textbullet{} Python \textbullet{} PyTorch \textbullet{} Pandas, NumPy, Scikit-learn \textbullet{} R\&D \textbullet{} git \textbullet{} Software engineering \textbullet{} Algorithm design \textbullet{} Technical writing \textbullet{} Scripting
+\cventry[8pt]{Oct 2023 -- Present}{Research Engineer}{Foundation for Research \& Technology Hellas}{Heraklion}{Greece}{
+Conducting research under public (\href{https://elidek.gr}{\textit{HEFRI}}) and private funding (\textit{Huawei Ireland Research Centre}). Core contributor in a \(\sim\)€300K Huawei-funded industrial project. Developed SOTA algorithms for causal discovery, root cause analysis and counterfactual reasoning. Implemented and tested proprietary software, successfully applied in real-world scenarios. Exceeded project milestones and acceptance criteria. Collaborated with international teams, delivered biweekly reports and presentations. \newline{}
+\textbf{Research Areas:} \textbullet{} Causality \textbullet{} Machine learning \textbullet{} Deep learning \newline{}
+\textbf{Skills:} \textbullet{} Python \textbullet{} PyTorch \textbullet{} Pandas, NumPy, Scikit-learn \textbullet{} git \textbullet{} R\&D \textbullet{} Software engineering \textbullet{} Algorithm design \textbullet{} Technical writing \textbullet{} Scripting
 }
 \else
 %
@@ -130,7 +134,7 @@ Successfully extracted, analyzed and presented key wellbeing indicators from rea
 
 \footnotetext[1]{\label{alphabetic} Authors contributed equally to this work.}
 
-\vspace{2pt}
+%\vspace{2pt}
 \cvitem{arXiv preprint 2025}{%
 \textbf{\href{https://arxiv.org/abs/2506.02084}{Temporal Causal-based Simulation for Realistic Time-series Generation}}\newline{}%
 Nikolaos Gkorgkolis, \ul{Nikolaos Kougioulis}\footnotemark[1], MingXue Wang, Bora Caglayan, Andrea Tonon, Dario Simionato \& Ioannis Tsamardinos (arXiv 2506.02084).%
@@ -168,7 +172,7 @@ Part of the \href{https://aristurtle.gr/}{arist.u.r.t.le} team, represented Aris
 \section{Skills}
 \cvitem[2pt]{Languages}{\textbullet{} English (Proficient) \textbullet{} French (Upper Intermediate) \textbullet{} Greek (Native)}
 \cvitem[2pt]{Prog.}{Python, JavaScript, C, MySQL, \LaTeX}
-\cvitem[2pt]{Other}{git, vim, Linux, Powerpoint}
+\cvitem[2pt]{Tools}{git, vim, Linux, Powerpoint}
 
 %\nocitebook{book1,book2}
 %\bibliographystylebook{plain}
@@ -177,7 +181,7 @@ Part of the \href{https://aristurtle.gr/}{arist.u.r.t.le} team, represented Aris
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}           % 'publications' is the name of a BibTeX file
 
-\vspace{28em}
+\vspace{25em}
 Last Updated: \today
 \end{document}
 
