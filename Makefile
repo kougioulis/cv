@@ -16,7 +16,7 @@ $(DOC).pdf: $(DOC).tex
 
 # Auxiliary files cleanup
 clean:
-	rm -f *.aux *.log *.bbl *.blg *.toc *.out *.lof *.lot *.acn *.acr *.alg *.glg *.glo *.glsdefs *.ist *.ilg *.ind *.fls *.fdb_latexmk *.synctex.gz
+	rm -f *.aux *.log *.bbl *.blg *.toc *.out *.lof *.lot *.acn *.acr *.alg *.glg *.glo *.glsdefs *.ist *.ilg *.ind *.fls *.fdb_latexmk *.synctex.gz *.bcf *.xml
 
 # Clean all including the generated .pdf
 cleanall: clean
