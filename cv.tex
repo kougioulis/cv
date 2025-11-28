@@ -5,29 +5,23 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt, a4paper, sans]{moderncv}      % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-\usepackage{textcomp}
+\documentclass[11pt, a4paper, sans]{moderncv}       % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{lmodern, textcomp}                      % supports text companion fonts
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\\renewcommand{\\familydefault}{\\sfdefault}       % to set the default font; use '\\sfdefault' for the default sans serif font, '\\rmdefault' for the default roman one, or any tex font name
 %\\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-\usepackage[utf8]{inputenc}                         % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                         % character encoding - if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-\usepackage{lmodern, textcomp}
-\usepackage{url}
-\usepackage{soul}
-\usepackage[symbol]{footmisc}
-
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage{url}                                    % to typeset URLs
+\usepackage{soul}                                   % for highlighting text
+\usepackage[symbol]{footmisc}                       % for footnotes
+\usepackage[scale=0.75]{geometry}                   % adjust page margins
 \setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
 \setlength{\makecvtitlenamewidth}{10cm}             % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{fontawesome5}
-%\usepackage{hyperref}
 
 \makeatletter
 \newcommand{\github}[1]{%
@@ -51,18 +45,19 @@
 %\name{name}{family name}                           % to show your name on the title page
 \firstname{Nikolaos}
 \familyname{Kougioulis}
-%\title{}              
+%\title{}                                           % optional, remove / comment the line if not wanted
 \address{}{}                                        % optional, remove / comment the line if not wanted    
-%\homepage{nkougioulis.com}
-%\mobile{00 00 00 00 00} 
+%\homepage{nkougioulis.com}                         % optional, remove / comment the line if not wanted
+%\mobile{00 00 00 00 00}                            % optional, remove / comment the line if not wanted 
 %\phone[fixed]{00}                                  % optional, remove / comment the line if not wanted
 %\phone[fax]{00}                                    % optional, remove / comment the line if not wanted
-%\email{}                    % optional, remove / comment the line if not wanted
-\extrainfo{\website{https://nkougioulis.com} ~ \mail{nkougioulis95@gmail.com} ~ \linkedin{https://linkedin.com/in/nikolaos-kougioulis-528364236} ~ \github{https://github.com/kougioulis} \\ %\gscholar{https://scholar.google.com} \\ 
-Nationality: Greek \\
-Location: Thessaloniki, Greece \newline{}
+%\email{}                                           % optional, remove / comment the line if not wanted
+%\extrainfo{\website{https://nkougioulis.com} ~ \mail{nkougioulis95@gmail.com} ~ \linkedin{https://linkedin.com/in/nikolaos-kougioulis-528364236} ~ \github{https://github.com/kougioulis} \\ %\gscholar{https://scholar.google.com} \\ 
+\extrainfo{\github{https://github.com/kougioulis} ~ \linkedin{https://linkedin.com/in/nikolaos-kougioulis-528364236} ~ \mail{nkougioulis95@gmail.com} \\   
+   \href{https://nkougioulis.com}{nkougioulis.com} \\
+   Nationality: Greek \\
+   Location: Thessaloniki, Greece \\
 }
-
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
@@ -78,7 +73,7 @@ Location: Thessaloniki, Greece \newline{}
 \setlength\tabcolsep{6pt}
 
 %---------------------------------------------------------------
-% accounting for short and long versions 
+% accounting for short and long versions
 \newif \iflong
 \newif \ifshort
 \longtrue
@@ -92,14 +87,14 @@ Location: Thessaloniki, Greece \newline{}
 
 %\vspace{-25pt}
 \section{Education}
-\cventry[8pt]{Sep 2022 -- Nov 2025}{MSc in Computer Science \& Engineering}{Department of Computer Science, University of Crete}{Greece}{}{%
+\cventry[8pt]{Sep 2022 -- Nov 2025}{MSc in Computer Science \& Engineering}{\href{https://csd.uoc.gr/CSD/index.jsp?lang=en}{Department of Computer Science}, \href{https://uoc.gr/en/home/}{University of Crete}}{Greece}{}{%
 Thesis: \href{https://github.com/kougioulis/thesis}{\textit{Large Causal Models for Temporal Causal Discovery}}\newline{}
-Advisor: Prof.~Ioannis Tsamardinos \newline{}
+Advisor: Prof.~\href{https://scholar.google.com/citations?user=7fendUwAAAAJ&hl=en}{Ioannis Tsamardinos} \newline{}
 GPA: 9.50/10.00 \newline{}
 %Specilization Areas: \textbullet{} Causality \textbullet{} Algorithms \textbullet{} Computer Vision \& Robotics
 }  % arguments 3 to 6 can be left empty
 
-\cventry[8pt]{Nov 2021}{Ptychion (BSc) in Mathematics}{Department of Mathematics, Aristotle University of Thessaloniki}{Greece}{}{
+\cventry[8pt]{Nov 2021}{Ptychion (BSc) in Mathematics}{\href{https://math.auth.gr/en/}{Department of Mathematics}, \href{https://auth.gr/en/}{Aristotle University of Thessaloniki}}{Greece}{}{
 Areas: \textbullet{} Pure Mathematics \textbullet{} Applied Mathematics \newline{}
 }
 
@@ -112,7 +107,7 @@ Areas: \textbullet{} Pure Mathematics \textbullet{} Applied Mathematics \newline
 
 \section{Professional Experience}
 \iflong
-\cventry[8pt]{Oct 2023 -- Present}{Research Engineer}{Foundation for Research \& Technology Hellas}{Heraklion}{Greece}{
+\cventry[8pt]{Oct 2023 -- Present}{Research Engineer}{\href{https://forth.gr/en/home/}{Foundation for Research \& Technology Hellas}}{Heraklion}{Greece}{
 Conducting research under public (\href{https://elidek.gr}{\textit{HEFRI}}) and private funding (\textit{Huawei Ireland Research Centre}). Core contributor in a \(\sim\)€300K Huawei-funded industrial project. Developed SOTA algorithms for causal discovery, root cause analysis and counterfactual reasoning. Implemented and tested proprietary software, successfully applied in real-world scenarios. Exceeded project milestones and acceptance criteria. Collaborated with international teams, delivered biweekly reports and presentations. \newline{}
 \textbf{Research Areas:} \textbullet{} Causality \textbullet{} Machine learning \textbullet{} Deep learning \newline{}
 \textbf{Skills:} \textbullet{} Python \textbullet{} PyTorch \textbullet{} Pandas, NumPy, Scikit-learn \textbullet{} git \textbullet{} R\&D \textbullet{} Software engineering \textbullet{} Algorithm design \textbullet{} Technical writing \textbullet{} Scripting
@@ -121,7 +116,7 @@ Conducting research under public (\href{https://elidek.gr}{\textit{HEFRI}}) and 
 %
 \fi
 
-\cventry[8pt]{Aug -- Oct 2017}{Data Analyst Intern}{Psychological Technologies Ltd}{London}{United Kingdom}{%
+\cventry[8pt]{Aug -- Oct 2017}{Data Analyst Intern}{\href{https://psyt.co.uk}{Psychological Technologies Ltd}}{London}{United Kingdom}{%
 Successfully extracted, analyzed and presented key wellbeing indicators from real data, collected using the Experience Sampling Method (ESM) via a proprietary mobile app. \newline{}
 \textbf{Skills:} \textbullet{} Data analysis \textbullet{} Data storytelling \textbullet{} R
 }
