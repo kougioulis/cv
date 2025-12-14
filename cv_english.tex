@@ -1,0 +1,184 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt, a4paper, sans]{moderncv}       % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{lmodern, textcomp}                      % supports text companion fonts
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\\renewcommand{\\familydefault}{\\sfdefault}       % to set the default font; use '\\sfdefault' for the default sans serif font, '\\rmdefault' for the default roman one, or any tex font name
+%\\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[utf8]{inputenc}                         % character encoding - if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{url}                                    % to typeset URLs
+\usepackage{soul}                                   % for highlighting text
+\usepackage[symbol]{footmisc}                       % for footnotes
+\usepackage[scale=0.75]{geometry}                   % adjust page margins
+\setlength{\hintscolumnwidth}{2.5cm}                % if you want to change the width of the column with the dates
+\setlength{\makecvtitlenamewidth}{10cm}             % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{fontawesome5}
+
+\makeatletter
+\newcommand{\github}[1]{%
+   \href{#1}{\faGithub}%
+}
+\newcommand{\gscholar}[1]{%
+   \href{#1}{\faGoogle}%
+}
+\newcommand{\linkedin}[1]{%
+   \href{#1}{\faLinkedin}%
+}
+\newcommand{\mail}[1]{%
+   \href{mailto:#1}{\faEnvelope}%
+}
+\newcommand{\website}[1]{%
+   \href{#1}{\faHome}%
+}
+\makeatother
+
+% personal data
+%\name{name}{family name}                           % to show your name on the title page
+\firstname{Nikolaos}
+\familyname{Kougioulis}
+%\title{}                                           % optional, remove / comment the line if not wanted
+\address{}{}                                        % optional, remove / comment the line if not wanted    
+%\homepage{nkougioulis.com}                         % optional, remove / comment the line if not wanted
+%\mobile{00 00 00 00 00}                            % optional, remove / comment the line if not wanted 
+%\phone[fixed]{00}                                  % optional, remove / comment the line if not wanted
+%\phone[fax]{00}                                    % optional, remove / comment the line if not wanted
+%\email{}                                           % optional, remove / comment the line if not wanted
+%\extrainfo{\website{https://nkougioulis.com} ~ \mail{nkougioulis95@gmail.com} ~ \linkedin{https://linkedin.com/in/nikolaos-kougioulis-528364236} ~ \github{https://github.com/kougioulis} \\ %\gscholar{https://scholar.google.com} \\ 
+\extrainfo{\github{https://github.com/kougioulis} ~ \linkedin{https://linkedin.com/in/nikolaos-kougioulis-528364236} ~ \mail{nkougioulis95@gmail.com} \\   
+   \href{https://nkougioulis.com}{nkougioulis.com} \\
+   %Nationality: Greek \\
+   Location: Thessaloniki, Greece \\
+   Open to relocation/ remote\\
+}
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]} % CONSIDER REPLACING THE ABOVE BY THIS
+
+%---------------------------------------------------------------
+%            content
+%---------------------------------------------------------------
+\setlength\arrayrulewidth{.4pt}
+\setlength\tabcolsep{6pt}
+
+%---------------------------------------------------------------
+% accounting for short and long versions
+\newif \iflong
+\newif \ifshort
+\longtrue
+%\shorttrue
+%---------------------------------------------------------------
+
+\begin{document}
+% \vspace{-220pt}
+
+\makecvtitle
+
+%\vspace{-25pt}
+\section{Education}
+\cventry[8pt]{Sep 2022 -- Nov 2025}{MSc in Computer Science \& Engineering}{\href{https://csd.uoc.gr/CSD/index.jsp?lang=en}{Department of Computer Science}, \href{https://uoc.gr/en/home/}{University of Crete}}{Greece}{}{%
+Thesis: \href{https://github.com/kougioulis/thesis}{\textit{Large Causal Models for Temporal Causal Discovery}}\newline{}
+Advisor: Prof.~\href{https://scholar.google.com/citations?user=7fendUwAAAAJ&hl=en}{Ioannis Tsamardinos} \newline{}
+GPA: 9.50/10.00 \newline{}
+%Specilization Areas: \textbullet{} Causality \textbullet{} Algorithms \textbullet{} Computer Vision \& Robotics
+}  % arguments 3 to 6 can be left empty
+
+\cventry[8pt]{Nov 2021}{Ptychion (BSc) in Mathematics}{\href{https://math.auth.gr/en/}{Department of Mathematics}, \href{https://auth.gr/en/}{Aristotle University of Thessaloniki}}{Greece}{}{
+Areas: \textbullet{} Pure Mathematics \textbullet{} Applied Mathematics \newline{}
+}
+
+\iflong
+\section{Military Service}
+\cventry[8pt]{}{Military obligations fulfilled}{}{}{}{}
+\else
+%
+\fi
+
+\section{Professional Experience}
+\iflong
+\cventry[8pt]{Oct 2023 -- Present}{Research Engineer}{\href{https://forth.gr/en/home/}{Foundation for Research \& Technology Hellas}}{Heraklion}{Greece}{
+Conducting research under public (\href{https://elidek.gr}{\textit{HEFRI}}) and private funding (\textit{Huawei Ireland Research Centre}). Core contributor in a \(\sim\)€300K Huawei-funded industrial project. Developed SOTA algorithms for causal discovery, root cause analysis and counterfactual reasoning. Implemented and tested proprietary software, successfully applied in real-world scenarios. Exceeded project milestones and acceptance criteria. Collaborated with international teams, delivered biweekly reports and presentations. \newline{}
+\textbf{Research Areas:} \textbullet{} Causality \textbullet{} Machine learning \textbullet{} Deep learning \newline{}
+\textbf{Skills:} \textbullet{} Python \textbullet{} PyTorch \textbullet{} Pandas, NumPy, Scikit-learn \textbullet{} git \textbullet{} R\&D \textbullet{} Software engineering \textbullet{} Algorithm design \textbullet{} Technical writing \textbullet{} Scripting
+}
+\else
+%
+\fi
+
+\cventry[8pt]{Aug -- Oct 2017}{Data Analyst Intern}{\href{https://psyt.co.uk}{Psychological Technologies Ltd}}{London}{United Kingdom}{%
+Successfully extracted, analyzed and presented key wellbeing indicators from real data, collected using the Experience Sampling Method (ESM) via a proprietary mobile app. \newline{}
+\textbf{Skills:} \textbullet{} Data analysis \textbullet{} Data storytelling \textbullet{} R
+}
+
+\iflong
+\section{Publications \& Manuscripts}
+\else
+\section{Selected Publications}
+\fi
+
+\footnotetext[1]{\label{alphabetic} Authors contributed equally to this work.}
+
+%\vspace{2pt}
+\cvitem{arXiv preprint 2025}{%
+\textbf{\href{https://arxiv.org/abs/2506.02084}{Temporal Causal-based Simulation for Realistic Time-series Generation}}\newline{}%
+Nikolaos Gkorgkolis, \ul{Nikolaos Kougioulis}\footnotemark[1], MingXue Wang, Bora Caglayan, Andrea Tonon, Dario Simionato \& Ioannis Tsamardinos (arXiv 2506.02084).%
+}
+\cvitem{MSc Dissertation}{%
+\textbf{\href{https://github.com/kougioulis/thesis}{Large Causal Models for Temporal Causal Discovery}}\newline{}%
+\ul{Nikolaos Kougioulis}.
+}
+\iflong
+\section{Teaching Assistanships}
+\cventry[2pt]{Fall 2022}{CS-100 Introduction to Computer Science}{University of Crete}{Greece}{}{%
+Assist. Prof. Polyvios Pratikakis \newline{}
+First year undergraduate course, Department of Computer Science
+}
+\cventry[2pt]{Spring 2023,24,25}{CS-119 Linear Algebra}{University of Crete}{Greece}{}{%
+Prof. Ioannis Tsamardinos\newline{}
+First year undergraduate course, Department of Computer Science
+}
+\cventry[2pt]{Fall 2023,24}{CS-487 Introduction to Artificial Intelligence}{University of Crete}{Greece}{}{
+Prof. Ioannis Tsamardinos\newline{}
+Final year undergraduate Course, Department of Computer Science
+}
+\else
+%
+\fi
+
+\iflong
+\section{Awards \& Distinctions}
+\cventry[2pt]{Jul 2019}{\href{https://qa.auth.gr/el/distinction/11397}{3rd Place Overall in Formula Student ATA 2019}}{}{}{}{%
+Part of the \href{https://aristurtle.gr/}{arist.u.r.t.le} team, represented Aristotle University of Thessaloniki in international competitions. \newline{}
+}
+%\cvitem[2pt]{'12}{OSSWC 2012 Award of Merit}
+\fi
+
+\section{Skills}
+\cvitem[2pt]{Languages}{\textbullet{} English (Proficient) \textbullet{} French (Upper Intermediate) \textbullet{} Greek (Native)}
+\cvitem[2pt]{Prog.}{Python, JavaScript, C, MySQL, \LaTeX}
+\cvitem[2pt]{Tools}{git, vim, Linux, Powerpoint}
+
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{pubs}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{transp}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}           % 'publications' is the name of a BibTeX file
+
+\vspace{25em}
+Last Updated: \today
+\end{document}
+
+%% end of file `cv.tex'.
