@@ -1,18 +1,25 @@
 # Variables
 #TEX = pdflatex
 TEX = TEXINPUTS=./libtex//: pdflatex # use local .cls and .sty files
-DOC = cv
+DOC = cv_english
+DOC_FR = cv_francais
 LATEXMK = latexmk
 
-# Main target: compile the document
-all: $(DOC).pdf
+# Main targets
+all: $(DOC).pdf $(DOC_FR).pdf
 
-# fallback to manual compilation if latexmk not available
+english: $(DOC).pdf
+french: $(DOC_FR).pdf
+
 $(DOC).pdf: $(DOC).tex
 	$(TEX) $(DOC).tex      # First LaTeX run
-	# $(BIB) $(DOC)         # Bibliography step (uncomment + define BIB if needed)
 	$(TEX) $(DOC).tex      # Second LaTeX run (resolve citations)
 	$(TEX) $(DOC).tex      # Third LaTeX run (resolve cross-references)
+
+$(DOC_FR).pdf: $(DOC_FR).tex
+	$(TEX) $(DOC_FR).tex   # First LaTeX run
+	$(TEX) $(DOC_FR).tex   # Second LaTeX run (resolve citations)
+	$(TEX) $(DOC_FR).tex   # Third LaTeX run (resolve cross-references)
 
 # Auxiliary files cleanup
 clean:
@@ -21,3 +28,4 @@ clean:
 # Clean all including the generated .pdf
 cleanall: clean
 	rm -f $(DOC).pdf
+	rm -f $(DOC_FR).pdf
